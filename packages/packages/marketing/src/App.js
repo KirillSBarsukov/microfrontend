@@ -1,15 +1,16 @@
 import React from 'react';
 import { Switch, Route, Router } from 'react-router-dom';
-import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
+import {
+  StylesProvider,
+  createGenerateClassName,
+} from '@material-ui/core/styles';
 
 import Landing from './components/Landing';
 import Pricing from './components/Pricing';
 
-const packageJson = require('../package.json');
-
 const generateClassName = createGenerateClassName({
-    productionPrefix: packageJson.name
-})
+  productionPrefix: 'ma',
+});
 
 export default ({ history }) => {
   return (
@@ -25,6 +26,3 @@ export default ({ history }) => {
     </div>
   );
 };
-
-
-///asdfsdf
